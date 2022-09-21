@@ -1,0 +1,61 @@
+body{
+    background-color: #fff;
+    font-family:'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+p{
+    color: rgb(0, 0, 0);
+    display: flex;
+    padding-left: 50px ;
+    padding-top: 350px;
+}
+
+.loader {
+    width: 180px;
+    padding-left: 200px;
+    padding-top: 0px;
+}
+
+.loader .loading_1 {
+    position: relative;
+    width: 200%;
+    height: 5px;
+    border: 1px solid #66548B;
+    border-radius: 10px;
+    animation: turn 4s linear 1.75s infinite;
+}
+
+.loader .loading_1:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: #66548B;
+    animation: load 2s linear infinite;
+}
+
+@keyframes load {
+    0% {
+        width: 0%;
+    }
+
+    87.5% {
+        width: 100%;
+    }
+}
+
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        top: 10px;
+    }
+
+    12.5% {
+        top: 30px;
+    }
+}
