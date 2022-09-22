@@ -1,54 +1,22 @@
 function validar() {
-  var nome = document.forms["cadastro"]["nome"];
-  if (nome.value == "") {
-    nome.classList.add("erro");
-    mensagem.innerHTML = "Preencha o nome";
-    return false;
-  } else {
-    nome.classList.remove("erro");
-    nome.classList.add("sucesso");
-  }
+    var nome = document.forms["feedback"]["nome"];
+    if (nome.value == "") {
+      nome.classList.add("erro");
+      mensagem.innerHTML = "Preencha o nome";
+      return false;
+    } else {
+      nome.classList.remove("erro");
+      nome.classList.add("sucesso");
+    }
+}
 
-
-  var senha = document.forms["cadastro"]["senha"]
-  if (senha.value == "") {
-    nome.classList.add("erro");
-    mensagem.innerHTML = "Preencha a senha";
-    return false;
-  } else {
-    nome.classList.remove("erro");
-    nome.classList.add("sucesso");
-  }
-
-  var email = document.forms["cadastro"]["email"]
+var email = document.forms["feedback"]["email"]
   if (email.value == "") {
-    nome.classList.add("erro");
-    mensagem.innerHTML = "Preencha com um email";
+    email.classList.add("erro");
+    mensagem.innerHTML = "Preencha com e-mail válido";
     return false;
   } else {
-    nome.classList.remove("erro");
-    nome.classList.add("sucesso");
+    email.classList.remove("erro");
+    email.classList.add("sucesso");
   }
-
-  var senha = document.forms["cadastro"]["senha"]
-  if (senha.value.length <= 5) {
-    nome.classList.add("erro");
-    mensagem.innerHTML = "Preencha a senha com mais de 6 digitos!";
-    return false;
-  } else {
-    nome.classList.remove("erro");
-    nome.classList.add("sucesso");
-  }
-
-  return true;
-}
-
-function Toggle() {
-  var temp = document.getElementById("senha");
-  if (temp.type === "password") {
-    temp.type = "text";
-  }
-  else {
-    temp.type = "password";
-  }
-}
+ 
